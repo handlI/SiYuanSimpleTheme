@@ -1,0 +1,120 @@
+/*
+ * 功能：各级标题的颜色。
+ * 作者：lihan
+ */
+
+/* ---------------------------------------编辑页面的标题样式----------------------------------------- */
+
+/* 一级标题 */
+.protyle-wysiwyg [data-node-id].h1,
+.b3-typography h1 {
+    color: var(--custom-h1-color);
+    border-left: 3px solid var(--custom-h1-color);  /* 左侧竖线 */
+    padding-left: 9px;
+    font-weight: var(--custom-h-font-weight);
+}
+.protyle-wysiwyg > [data-node-id].h1 > [contenteditable][spellcheck]:empty {
+    padding-left: var(--custom-h1-indentation);
+}
+
+/* 二级标题 */
+.protyle-wysiwyg [data-node-id].h2,
+.b3-typography h2 {
+    color: var(--custom-h2-color);
+    border-left: 3px solid var(--custom-h2-color);
+    /* padding-left: 9px; */
+    font-weight: var(--custom-h-font-weight);
+}
+.protyle-wysiwyg > [data-node-id].h2 > [contenteditable][spellcheck]:empty {
+    padding-left: var(--custom-h2-indentation);
+}
+
+/* 三级标题 */
+.protyle-wysiwyg [data-node-id].h3,
+.b3-typography h3 {
+    color: var(--custom-h3-color);
+    border-left: 3px solid var(--custom-h3-color);
+    padding-left: 9px;
+    font-weight: var(--custom-h-font-weight);
+}
+.protyle-wysiwyg > [data-node-id].h3 > [contenteditable][spellcheck]:empty {
+    padding-left: var(--custom-h3-indentation);
+}
+
+/* 四级标题 */
+.protyle-wysiwyg [data-node-id].h4,
+.b3-typography h4 {
+    color: var(--custom-h4-color);
+    border-left: 3px solid var(--custom-h4-color);
+    padding-left: 9px;
+    font-weight: var(--custom-h-font-weight);
+}
+.protyle-wysiwyg > [data-node-id].h4 > [contenteditable][spellcheck]:empty {
+    padding-left: var(--custom-h4-indentation);
+}
+
+/* 五级标题 */
+.protyle-wysiwyg [data-node-id].h5,
+.b3-typography h5 {
+    color: var(--custom-h5-color);
+    border-left: 3px solid var(--custom-h5-color);
+    padding-left: 9px;
+    font-weight: var(--custom-h-font-weight);
+}
+.protyle-wysiwyg > [data-node-id].h5 > [contenteditable][spellcheck]:empty {
+    padding-left: var(--custom-h5-indentation);
+}
+
+/* 六级标题 */
+.protyle-wysiwyg [data-node-id].h6,
+.b3-typography h6 {
+    color: var(--custom-h6-color);
+    border-left: 3px solid var(--custom-h6-color);
+    padding-left: 9px;
+    font-weight: var(--custom-h-font-weight);
+}
+.protyle-wysiwyg > [data-node-id].h6 > [contenteditable][spellcheck]:empty {
+    padding-left: var(--custom-h6-indentation);
+}
+
+/* -------------------------------------------------区分大纲中的各级标题------------------------------------------------ */
+/* 一级标题 */
+.file-tree ul.b3-list.b3-list--background [data-subtype="h1"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background [data-subtype="h1"] {
+    color: var(--custom-h1-color);  /*字体颜色 */
+}
+
+/* 二级标题 */
+.file-tree ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background [data-subtype="h2"] {
+    color: var(--custom-h2-color);
+}
+
+/* 三级标题 */
+.file-tree ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background [data-subtype="h3"] {
+    color: var(--custom-h3-color);
+}
+
+/* 四级标题 */
+.file-tree ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background [data-subtype="h4"] {
+    color: var(--custom-h4-color);
+}
+
+/* 五级标题 */
+.file-tree ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background [data-subtype="h5"] {
+    color: var(--custom-h5-color);
+}
+
+/* 六级标题 */
+.file-tree ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__text,
+.file-tree ul.b3-list.b3-list--background [data-subtype="h6"] {
+    color: var(--custom-h6-color);
+}
+
+/*---------------------------编辑区折叠标题时添加 "标题折叠标记"----------------------------*/
+.protyle-wysiwyg [fold="1"][data-node-id][data-type="NodeHeading"]::after {
+    content: var(--custom-h-fold-mark);
+}

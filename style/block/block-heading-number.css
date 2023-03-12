@@ -1,0 +1,181 @@
+/*
+ * 功能：各级标题自动编号。
+ * 作者：lihan
+ */
+
+/* 整个页面 */
+.protyle-wysiwyg, .b3-typography {
+    counter-reset: h1_n 0 h1_n_d 0;  /* 一级标题的序号清零 */
+}
+
+/*-------------------------------编辑页面的标题进行自动编号--------------------------------------------*/
+
+/* 一级标题 */
+.protyle-wysiwyg > [data-node-id].h1,
+.protyle-wysiwyg > [data-node-id][fold="1"].h1,
+.b3-typography > h1 {
+    counter-increment: h1_n;  /* 本级标题序号累加 */
+    counter-reset: h2_n 0;    /* 下级标题序号清零 */
+}
+.protyle-wysiwyg > [data-node-id].h1::before,
+.protyle-wysiwyg > [data-node-id][fold="1"].h1::before,
+.b3-typography > h1::before {
+    float: left;                               /* 防止序号和文字分行 */
+    font-size: var(--custom-h-num-font-size);  /* 序号大小 */
+    content: counter(h1_n) "\00A0";                         /* 数字序号  其中 \00A0 表示空格 */
+    /* content: counter(h1_n, cjk-ideographic) "\00A0"; */  /* 大写序号 */
+}
+
+/* 二级标题 */
+.protyle-wysiwyg > [data-node-id].h2,
+.protyle-wysiwyg > [data-node-id][fold="1"].h2,
+.b3-typography > h2 {
+    counter-increment: h2_n;
+    counter-reset: h3_n 0;
+}
+.protyle-wysiwyg > [data-node-id].h2::before,
+.protyle-wysiwyg > [data-node-id][fold="1"].h2::before,
+.b3-typography > h2::before {
+    float: left;
+    font-size: var(--custom-h-num-font-size);
+    content: counter(h1_n) "." counter(h2_n) "\00A0";
+}
+
+/* 三级标题 */
+.protyle-wysiwyg > [data-node-id].h3,
+.protyle-wysiwyg > [data-node-id][fold="1"].h3,
+.b3-typography > h3 {
+    counter-increment: h3_n;
+    counter-reset: h4_n 0;
+}
+.protyle-wysiwyg > [data-node-id].h3::before,
+.protyle-wysiwyg > [data-node-id][fold="1"].h3::before,
+.b3-typography > h3::before {
+    float: left;
+    font-size: var(--custom-h-num-font-size);
+    content: counter(h1_n) "." counter(h2_n) "." counter(h3_n) "\00A0";
+}
+
+/* 四级标题 */
+.protyle-wysiwyg > [data-node-id].h4,
+.protyle-wysiwyg > [data-node-id][fold="1"].h4,
+.b3-typography > h4 {
+    counter-increment: h4_n;
+    counter-reset: h5_n 0;
+}
+.protyle-wysiwyg > [data-node-id].h4::before,
+.protyle-wysiwyg > [data-node-id][fold="1"].h4::before,
+.b3-typography > h4::before {
+    float: left;
+    font-size: var(--custom-h-num-font-size);
+    content: counter(h1_n) "." counter(h2_n) "." counter(h3_n) "." counter(h4_n) "\00A0";
+}
+
+/* 五级标题 */
+.protyle-wysiwyg > [data-node-id].h5,
+.protyle-wysiwyg > [data-node-id][fold="1"].h5,
+.b3-typography > h5 {
+    counter-increment: h5_n;
+    counter-reset: h6_n 0;
+}
+.protyle-wysiwyg > [data-node-id].h5::before,
+.protyle-wysiwyg > [data-node-id][fold="1"].h5::before,
+.b3-typography > h5::before {
+    float: left;
+    font-size: var(--custom-h-num-font-size);
+    content: counter(h1_n) "." counter(h2_n) "." counter(h3_n) "." counter(h4_n) "." counter(h5_n) "\00A0";
+}
+
+/* 六级标题 */
+.protyle-wysiwyg > [data-node-id].h6,
+.protyle-wysiwyg > [data-node-id][fold="1"].h6,
+.b3-typography > h6 {
+    counter-increment: h6_n;
+}
+.protyle-wysiwyg > [data-node-id].h6::before,
+.protyle-wysiwyg > [data-node-id][fold="1"].h6::before,
+.b3-typography > h6::before {
+    float: left;
+    font-size: var(--custom-h-num-font-size);
+    content: counter(h1_n) "." counter(h2_n) "." counter(h3_n) "." counter(h4_n) "." counter(h5_n) "." counter(h6_n) "\00A0";
+}
+
+
+/*-------------------------------大纲中的标题进行自动编号--------------------------------------------*/
+/* 一级标题 */
+.file-tree ul.b3-list.b3-list--background [data-subtype="h1"]
+{
+    counter-increment: h1_n;
+    counter-reset: h2_n 0;
+}
+.file-tree ul.b3-list.b3-list--background [data-subtype="h1"] .b3-list-item__text::before
+{
+    content: counter(h1_n) "\00A0";
+}
+
+/* 二级标题 */
+.file-tree ul.b3-list.b3-list--background [data-subtype="h2"]
+{
+    counter-increment: h2_n;
+    counter-reset: h3_n 0;
+}
+.file-tree ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__text::before
+{
+    content: counter(h1_n) "." counter(h2_n) "\00A0";
+}
+
+/* 三级标题 */
+.file-tree ul.b3-list.b3-list--background [data-subtype="h3"]
+{
+    counter-increment: h3_n;
+    counter-reset: h4_n 0;
+}
+.file-tree ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__text::before
+{
+    content: counter(h1_n) "." counter(h2_n) "." counter(h3_n) "\00A0";
+}
+
+/* 四级标题 */
+.file-tree ul.b3-list.b3-list--background [data-subtype="h4"]
+{
+    counter-increment: h4_n;
+    counter-reset: h5_n 0;
+}
+.file-tree ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text::before
+{
+    content: counter(h1_n) "." counter(h2_n) "." counter(h3_n) "." counter(h4_n) "\00A0";
+}
+
+/* 五级标题 */
+.file-tree ul.b3-list.b3-list--background [data-subtype="h5"]
+{
+    counter-increment: h5_n;
+    counter-reset: h6_n 0;
+}
+.file-tree ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__text::before
+{
+    content: counter(h1_n) "." counter(h2_n) "." counter(h3_n) "." counter(h4_n) "." counter(h5_n) "\00A0";
+}
+
+/* 六级标题 */
+.file-tree ul.b3-list.b3-list--background [data-subtype="h6"]
+{
+    counter-increment: h6_n;
+}
+.file-tree ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__text::before
+{
+    content: counter(h1_n) "." counter(h2_n) "." counter(h3_n) "." counter(h4_n) "." counter(h5_n) "." counter(h6_n) "\00A0";
+}
+
+/*-----------------------------------编辑页面折叠标题时保留序号---------------------------------*/
+.protyle-wysiwyg [fold="1"][data-node-id][data-type="NodeHeading"]::before {
+    /* 移除子标题折叠原有样式 */
+    height: unset;
+    width: unset;
+    background: unset;
+    position: unset;
+    left: unset;
+    top: unset;
+    border-radius: unset;
+    margin-top: unset;
+}
