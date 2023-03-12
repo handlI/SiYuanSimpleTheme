@@ -79,38 +79,62 @@
 
 /* -------------------------------------------------区分大纲中的各级标题------------------------------------------------ */
 /* 一级标题 */
-.file-tree ul.b3-list.b3-list--background [data-subtype="h1"] .b3-list-item__text,
-.file-tree ul.b3-list.b3-list--background [data-subtype="h1"] {
-    color: var(--custom-h1-color);  /*字体颜色 */
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h1"],  /* 手机端 H1 字符 */
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h1"],                            /* 电脑端 H1 字符 */
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h1"] .b3-list-item__text,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h1"] .b3-list-item__text,        /* 电脑端 H1 标题 */
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h1"] .b3-list-item__toggle,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h1"] .b3-list-item__toggle {     /* 电脑端 H1 前的箭头 */
+    color: var(--custom-h1-color);
 }
 
 /* 二级标题 */
-.file-tree ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__text,
-.file-tree ul.b3-list.b3-list--background [data-subtype="h2"] {
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h2"],
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h2"],
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__text,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__text,
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__toggle,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__toggle {
     color: var(--custom-h2-color);
 }
 
 /* 三级标题 */
-.file-tree ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__text,
-.file-tree ul.b3-list.b3-list--background [data-subtype="h3"] {
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h3"],
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h3"],
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__text,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__text,
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__toggle,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__toggle {
     color: var(--custom-h3-color);
 }
 
 /* 四级标题 */
-.file-tree ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text,
-.file-tree ul.b3-list.b3-list--background [data-subtype="h4"] {
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h4"],
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h4"],
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text,
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__toggle,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__toggle {
     color: var(--custom-h4-color);
 }
 
 /* 五级标题 */
-.file-tree ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__text,
-.file-tree ul.b3-list.b3-list--background [data-subtype="h5"] {
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h5"],
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h5"],
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__text,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__text,
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__toggle,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__toggle {
     color: var(--custom-h5-color);
 }
 
 /* 六级标题 */
-.file-tree ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__text,
-.file-tree ul.b3-list.b3-list--background [data-subtype="h6"] {
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h6"],
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h6"],
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__text,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__text,
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__toggle,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__toggle {
     color: var(--custom-h6-color);
 }
 

@@ -103,66 +103,78 @@
 
 /*-------------------------------大纲中的标题进行自动编号--------------------------------------------*/
 /* 一级标题 */
-.file-tree ul.b3-list.b3-list--background [data-subtype="h1"]
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h1"],  /* 手机端 H1 字符 */
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h1"]                             /* 电脑端 H1 字符 */
 {
     counter-increment: h1_n;
     counter-reset: h2_n 0;
 }
-.file-tree ul.b3-list.b3-list--background [data-subtype="h1"] .b3-list-item__text::before
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h1"] .b3-list-item__text::before,  /* 电脑端 H1 标题::before */
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h1"] .b3-list-item__text::before                             /* 电脑端 H1 标题::before */
 {
     content: counter(h1_n) "\00A0";
 }
 
 /* 二级标题 */
-.file-tree ul.b3-list.b3-list--background [data-subtype="h2"]
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h2"],
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h2"]
 {
     counter-increment: h2_n;
     counter-reset: h3_n 0;
 }
-.file-tree ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__text::before
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__text::before,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h2"] .b3-list-item__text::before
 {
     content: counter(h1_n) "." counter(h2_n) "\00A0";
 }
 
 /* 三级标题 */
-.file-tree ul.b3-list.b3-list--background [data-subtype="h3"]
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h3"],
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h3"]
 {
     counter-increment: h3_n;
     counter-reset: h4_n 0;
 }
-.file-tree ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__text::before
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__text::before,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h3"] .b3-list-item__text::before
 {
     content: counter(h1_n) "." counter(h2_n) "." counter(h3_n) "\00A0";
 }
 
 /* 四级标题 */
-.file-tree ul.b3-list.b3-list--background [data-subtype="h4"]
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h4"],
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h4"]
 {
     counter-increment: h4_n;
     counter-reset: h5_n 0;
 }
-.file-tree ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text::before
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text::before,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h4"] .b3-list-item__text::before
 {
     content: counter(h1_n) "." counter(h2_n) "." counter(h3_n) "." counter(h4_n) "\00A0";
 }
 
 /* 五级标题 */
-.file-tree ul.b3-list.b3-list--background [data-subtype="h5"]
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h5"],
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h5"]
 {
     counter-increment: h5_n;
     counter-reset: h6_n 0;
 }
-.file-tree ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__text::before
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__text::before,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h5"] .b3-list-item__text::before
 {
     content: counter(h1_n) "." counter(h2_n) "." counter(h3_n) "." counter(h4_n) "." counter(h5_n) "\00A0";
 }
 
 /* 六级标题 */
-.file-tree ul.b3-list.b3-list--background [data-subtype="h6"]
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h6"],
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h6"]
 {
     counter-increment: h6_n;
 }
-.file-tree ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__text::before
+#sidebar [data-type="sidebar-outline"] ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__text::before,
+.sy__outline ul.b3-list.b3-list--background [data-subtype="h6"] .b3-list-item__text::before
 {
     content: counter(h1_n) "." counter(h2_n) "." counter(h3_n) "." counter(h4_n) "." counter(h5_n) "." counter(h6_n) "\00A0";
 }
