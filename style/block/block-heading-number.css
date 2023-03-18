@@ -5,7 +5,7 @@
 
 /* 整个页面 */
 .protyle-wysiwyg, .b3-typography {
-    counter-reset: h1_n 0 h1_n_d 0;  /* 一级标题的序号清零 */
+    counter-reset: h1_n 0;  /* 一级标题的序号清零 */
 }
 
 /*-------------------------------编辑页面的标题进行自动编号--------------------------------------------*/
@@ -15,7 +15,7 @@
 .protyle-wysiwyg > [data-node-id][fold="1"].h1,
 .b3-typography > h1 {
     counter-increment: h1_n;  /* 本级标题序号累加 */
-    counter-reset: h2_n 0;    /* 下级标题序号清零 */
+    counter-reset: h2_n 0 h3_n 0 h4_n 0 h5_n 0 h6_n 0;    /* 后续所有标题序号清零 */
 }
 .protyle-wysiwyg > [data-node-id].h1::before,
 .protyle-wysiwyg > [data-node-id][fold="1"].h1::before,
@@ -31,7 +31,7 @@
 .protyle-wysiwyg > [data-node-id][fold="1"].h2,
 .b3-typography > h2 {
     counter-increment: h2_n;
-    counter-reset: h3_n 0;
+    counter-reset: h3_n 0 h4_n 0 h5_n 0 h6_n 0;
 }
 .protyle-wysiwyg > [data-node-id].h2::before,
 .protyle-wysiwyg > [data-node-id][fold="1"].h2::before,
@@ -46,7 +46,7 @@
 .protyle-wysiwyg > [data-node-id][fold="1"].h3,
 .b3-typography > h3 {
     counter-increment: h3_n;
-    counter-reset: h4_n 0;
+    counter-reset: h4_n 0 h5_n 0 h6_n 0;
 }
 .protyle-wysiwyg > [data-node-id].h3::before,
 .protyle-wysiwyg > [data-node-id][fold="1"].h3::before,
@@ -61,7 +61,7 @@
 .protyle-wysiwyg > [data-node-id][fold="1"].h4,
 .b3-typography > h4 {
     counter-increment: h4_n;
-    counter-reset: h5_n 0;
+    counter-reset: h5_n 0 h6_n 0;
 }
 .protyle-wysiwyg > [data-node-id].h4::before,
 .protyle-wysiwyg > [data-node-id][fold="1"].h4::before,
