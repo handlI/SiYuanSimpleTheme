@@ -2,10 +2,10 @@
 /* @import url(/appearance/themes/daylight/theme.css); */
 :root[data-theme-mode=light] {
     /* 子标题及其对应大纲颜色 | Subheadings and their corresponding outline colors */
-    --custom-h1-color: var(--custom-color-my-black);
-    --custom-h2-color: var(--custom-color-my-blue);
-    --custom-h3-color: var(--custom-color-my-yellow);
-    --custom-h4-color: var(--custom-color-my-green);
-    --custom-h5-color: var(--custom-color-my-red-1);
-    --custom-h6-color: var(--custom-color-my-purple);
+    --custom-h1-color: var(--custom-color-my-blue);
+    --custom-h2-color: var(--custom-color-my-yellow);
+    --custom-h3-color: var(--custom-color-my-green);
+    --custom-h4-color: var(--custom-color-my-red-1);
+    --custom-h5-color: var(--custom-color-my-purple);
+    --custom-h6-color: var(--custom-color-my-black);
 }

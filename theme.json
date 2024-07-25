@@ -1,7 +1,25 @@
 {
-  "name": "SYSimpleTheme",
+  "name": "SiYuanSimpleTheme",
   "author": "handlI",
   "url": "https://github.com/handlI/SiYuanSimpleTheme",
-  "version": "1.2",
-  "modes": ["light","dark"]
+  "version": "1.2.1",
+  "displayName": {
+    "default": "Theme: color_num_heading",
+    "zh_CN": "主题：标题自动编号和着色"
+  },
+  "description": {
+    "default": "This is a theme with automatic numbering and colored heading.",
+    "zh_CN": "在官方样式的基础上，对标题进行自动编号和颜色渲染。"
+  },
+  "readme": {
+    "default": "README.md",
+    "zh_CN": "README.md"
+  },
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "keywords": [
+    "标题", "自动编号","颜色"
+  ]
 }

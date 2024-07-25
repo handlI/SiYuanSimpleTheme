@@ -1,10 +1,10 @@
 /* 自动应用的深色主题配置 */
 :root[data-theme-mode=dark] {
     /* 子标题及其对应大纲颜色 | Subheadings and their corresponding outline colors */
-    --custom-h1-color: var(--b3-theme-on-background);
-    --custom-h2-color: var(--b3-card-info-color);
-    --custom-h3-color: var(--b3-card-warning-color);
-    --custom-h4-color: var(--b3-card-success-color);
-    --custom-h5-color: var(--b3-card-error-color);
-    --custom-h6-color: var(--custom-color-8-3);
+    --custom-h1-color: var(--b3-card-info-color);
+    --custom-h2-color: var(--b3-card-warning-color);
+    --custom-h3-color: var(--b3-card-success-color);
+    --custom-h4-color: var(--b3-card-error-color);
+    --custom-h5-color: var(--custom-color-8-3);
+    --custom-h6-color: var(--b3-theme-on-background);
 }
