@@ -1,9 +1,3 @@
-/* 引入官方样式-首句需改为 :root[data-theme-mode=light] */
-@import url("./theme-daylight.css");
-
-/* 引入官方样式-首句需改为 :root[data-theme-mode=dark] 感觉不太优雅，因此先关闭 */
-/* @import url("./theme-midnight.css"); */
-
 /* 自定义模块所使用的变量的值 */
 @import url("./style/config/config_common.css");  /* 通用变量 */
 @import url("./style/config/config_light.css");   /* light 模式下的颜色值 */
@@ -12,3 +6,11 @@
 /* 块样式 */
 @import url("./style/block/block-heading-color.css");  /* 标题样式 */
 @import url("./style/block/block-heading-number.css");  /* 标题自动编号 */
+
+/* 引入官方主题 */
+:root[data-theme-mode=light] {
+    @import url("./theme-daylight.css");
+}
+:root[data-theme-mode=dark] {
+    @import url("./theme-midnight.css");
+}
